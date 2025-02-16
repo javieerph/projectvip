@@ -3,6 +3,7 @@
 void up(int *vt);
 void down(int *vt);
 void left(int *vt);
+void right(int *vt);
 void board();
 
 int board_ar [6][6] = {{6,0,0,0,0,6},{5,0,0,0,0,5},{5,0,0,0,0,5},
@@ -50,6 +51,21 @@ void    board_left(int v[4])
         board_ar [l][0] = v [l1];
         l++;
         l1++;
+    }
+}
+
+void    board_right(int v[4])
+{
+    int r;
+    int r1;
+
+    r = 1;
+    r1 = 0;
+    while (r < 5 && r1 < 4)
+    {
+        board_ar [r][5] = v [r1];
+        r++;
+        r1++;
     }
 }
 
